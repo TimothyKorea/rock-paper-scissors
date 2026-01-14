@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Timothy-korea">
+        <meta name="description" content="This is a website for the rock paper scissors game">
+
+        <title>Rock Paper Scissors</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✊</text></svg>">
+
+        <!-- My fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+        <!-- My css -->
+        <link rel="stylesheet" href="styles/game.css">
+        <link rel="stylesheet" href="media/media.css">
+
+        <!-- Script -->
+        <script defer src="script/game.js"></script>
+    </head>
+
+
+    <body>
+        <div class="container">
+        <header>
+            <h1 class="game-title">Rock, Paper, <span class="accent-text">Scissors</span></h1>
+        </header>
+
+        <main>
+            <section aria-label="Player Choices">
+            <h2 class="game-section">Make Your Choice:</h2>
+            
+            <div class="hand-gestures-wrapper">
+                <button onclick="playGame('Rock')"
+                 class="hand-gestures-btn rock-mg-left" aria-label="Select rock">
+                    <img src="images/rock-gesture2.png" alt="">
+                </button>
+
+                <button onclick="playGame('Paper')"
+                 class="hand-gestures-btn" aria-label="Select paper">
+                    <img src="images/paper-gesture.png" alt=""> 
+                </button>
+                
+                <button onclick="playGame('Scissors')"
+                 class="hand-gestures-btn" aria-label="Select scissors">
+                    <img src="images/scissors-gesture.png" alt="">
+                </button>
+            </div>
+
+            <div class="moves-wrapper">
+                <p class="player-move"></p>
+                <p class="computer-move"></p>
+            </div>
+
+            <p class="result"></p>
+            <p class="updated-score"></p>
+
+            <div>
+                <button onclick="
+                    score = {
+                        wins:0,
+                        losses:0,
+                        ties:0
+                    }
+                    localStorage.removeItem('score');
+                    updateGameScore();
+                    " class="reset-btn">Play Again</button>
+            </div>
+            </section>
+        </main>
+        </div>
+    </body>
+</html>

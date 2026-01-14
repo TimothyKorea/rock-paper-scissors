@@ -1,0 +1,113 @@
+body{
+    background-color:#262626;
+    font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin:0;
+    padding:0;
+}
+
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+
+.container{
+    width:80%;
+    margin:0 auto;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.hand-gestures-wrapper{
+    margin-bottom:1.3em;
+}
+
+.hand-gestures-btn{
+    border:2px solid #fff;
+    padding:1.5em 1.5em;
+    border-radius:50%;
+    display:inline-block;
+    margin-left:.5em;
+    cursor:pointer;
+    margin-bottom:.9em;
+    background-color:transparent;
+}
+
+.hand-gestures-btn img{
+    width:40px;
+    object-fit:cover;
+}
+
+.hand-gestures-btn:hover{
+    background-color:rgba(255, 255, 255, 0.1);
+    transform:translateY(-2px);
+}
+
+.rock-mg-left{
+    margin-left:0;
+} 
+
+.game-title{
+    font-weight:700;
+    color:#fff;
+    margin-bottom:0.75em;
+}
+
+.accent-text{
+    color:rgb(243, 161, 8);  /* #FFA500 */
+}
+
+.game-section{
+    color:#fff;
+    font-size:clamp(16px, 18px, 20px);
+    font-weight:400;
+    line-height:1.5;
+    margin-bottom:.4em;
+}
+
+/* player move */
+.moves-wrapper{
+    margin-bottom:1em;
+}
+
+.player-move,
+.computer-move{
+    color:#fff;
+    margin-top:.4em;
+}
+
+/* game result */ 
+.result{
+    font-size:1.5rem;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:2em;
+}
+
+/* updated-score */
+.updated-score{
+    color:#fff;
+    margin-bottom:1em;
+}
+
+/* game-reset */
+.reset-btn{
+    padding:.6em 1em; 
+    cursor:pointer;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    color:#fff;
+    border:1px solid #fff;
+    border-radius:10em;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    transition:background-color 0.2s ease, transform 0.2s ease;
+}
+
+.reset-btn:hover{
+    background-color:rgba(255,255,255,0.25);
+    transform:scale(1.05);
+}
+
+
+

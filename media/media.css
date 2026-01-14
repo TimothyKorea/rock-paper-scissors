@@ -1,0 +1,37 @@
+@media(min-width:1024px){
+    .game-title{
+        font-size:3rem;
+    }
+
+    .hand-gestures-btn img{
+        width:64px;
+    }
+
+    .container{
+        width:min(70%, 1100px);
+    }
+}
+
+@media(min-width:600px) {
+    .hand-gestures-btn img{
+        width:56px;
+    }
+
+    .hand-gestures-btn{
+        padding:2.3em;
+        margin-left:.93em;
+    }
+
+    .rock-mg-left{
+        margin-left:0;
+    } 
+
+    .game-title{
+        font-size:2.5rem;
+    }
+
+    .game-section{
+        font-size:1.125rem;
+        margin-bottom:.8em;
+    }
+}
