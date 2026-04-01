@@ -12,6 +12,27 @@ function updateGameScore() {
     document.querySelector('.updated-score').innerHTML = `Wins: ${score.wins} , Losses: ${score.losses}, Ties: ${score.ties}`;
 }
 
+const jsAutoPlay = document.querySelector('.auto-play-btn');
+let isAutoPlaying = false;
+let intervalId;
+
+jsAutoPlay.addEventListener('click', function(){
+    if(!isAutoPlaying){
+        intervalId = setInterval(function(){
+        let playerMove = pickComputerMove();
+        playGame(playerMove); 
+        }, 1000)
+        isAutoPlaying = true;
+    }
+
+    else{
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
+    
+})
+
+
 function playGame(playerMove) {
     let computerMove = pickComputerMove();
     let result = '';

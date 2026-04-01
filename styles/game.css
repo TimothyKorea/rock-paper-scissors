@@ -5,6 +5,10 @@ body{
     padding:0;
 }
 
+button{
+    touch-action: manipulation;  /*i added this for tapping, not zooming*/
+}
+
 *, *::before, *::after{
     box-sizing:border-box;
 }
@@ -55,7 +59,7 @@ img{
 }
 
 .accent-text{
-    color:rgb(243, 161, 8);  /* #FFA500 */
+    color:rgb(243, 161, 8);  
 }
 
 .game-section{
@@ -92,8 +96,9 @@ img{
 }
 
 /* game-reset */
-.reset-btn{
-    padding:.6em 1em; 
+.reset-btn,
+.auto-play-btn{
+    padding:1em 1.5em; 
     cursor:pointer;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.15);
@@ -104,9 +109,14 @@ img{
     transition:background-color 0.2s ease, transform 0.2s ease;
 }
 
-.reset-btn:hover{
+.reset-btn:hover,
+.auto-play-btn:hover{
     background-color:rgba(255,255,255,0.25);
     transform:scale(1.05);
+}
+
+.auto-play-btn{
+    margin-left:1em;
 }
 
 
