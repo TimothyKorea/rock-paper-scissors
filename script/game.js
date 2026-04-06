@@ -12,6 +12,17 @@ function updateGameScore() {
     document.querySelector('.updated-score').innerHTML = `Wins: ${score.wins} , Losses: ${score.losses}, Ties: ${score.ties}`;
 }
 
+const jsResetScore = document.querySelector('.reset-btn');
+jsResetScore.addEventListener('click', function(){
+    score = {
+                wins:0,
+                losses:0,
+                ties:0
+            }
+            localStorage.removeItem('score');
+            updateGameScore();
+})
+
 const jsAutoPlay = document.querySelector('.auto-play-btn');
 let isAutoPlaying = false;
 let intervalId;
@@ -30,6 +41,22 @@ jsAutoPlay.addEventListener('click', function(){
         isAutoPlaying = false;
     }
     
+})
+
+const rockPlayerMove = document.querySelector('.rock');
+const paperPlayerMove = document.querySelector('.paper');
+const scissorsPlayerMove = document.querySelector('.scissors');
+
+rockPlayerMove.addEventListener('click', function(){
+    playGame('Rock');
+})
+
+paperPlayerMove.addEventListener('click', function(){
+    playGame('Paper');
+})
+
+scissorsPlayerMove.addEventListener('click', function(){
+    playGame('Scissors');
 })
 
 
